@@ -6,21 +6,21 @@ int main(){
 
     // Adição (+)
     x = x + y;
-    x += y; // Maneira simplificada da linha anterior
+    x += y;
     x++; // Adiciona 1 ao valor de x
 
     // Subtração (-)
     x = x - y;
-    x -= y; // Maneira simplificada da linha anterior
+    x -= y;
     x--; // Subtrai 1 ao valor de x
 
     // Multiplicação (*)
     x = x * y;
-    x *= y; // Maneira simplificada da linha anterior
+    x *= y;
 
     // Divisão (/)
     x = x / y;
-    x /= y; // Maneira simplificada da linha anterior
+    x /= y;
 
     // Resto da divisão (%)
     int z = x % y;

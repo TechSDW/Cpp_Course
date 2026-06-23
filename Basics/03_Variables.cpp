@@ -25,7 +25,7 @@ int main(){
     // String (Texto)
     std::string frase = "Capivaras são demais";
 
-    /* Obs: Obrigatoriamente, para distinguir o Char de uma String utiliza-se '' e "" respectivamente*/
+    /* Obs: Obrigatoriamente, para distinguir o Char de uma String utiliza-se '' e "" respectivamente */
 
     // É possível determinar variáveis com valores imutáveis utilizando "const"
     const double PI =   3.14159; // Recomenda-se utilizar letras MAIÚSCULAS para constantes
