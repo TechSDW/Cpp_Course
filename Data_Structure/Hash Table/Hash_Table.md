@@ -19,8 +19,8 @@ aluno_nota["Carlos"]
 ### Hash
 Antes de aprender sobre os Hash Tables iremos entender o que é um **HASH**.
 O hash é um tipo de criptografia onde não é possível descriptografar o resultado final após criptografado.
-Dado um input qualquer ele irá passar por uma função hash que sempre retornará um valor com um tamanho fixo de caracteres.
-Esta criptografia apenas aplica a função ao valor inserido e o compara com o output esperado, dessa forma, não é necessário saber o conteúdo da mensagem.
+Dado um input qualquer ele irá passar por uma função hash que sempre retornará o mesmo valor.
+Esta criptografia apenas aplica a função ao valor inserido e o compara com o output esperado, dessa forma, não é necessário saber o conteúdo original da mensagem.
 
 ---
 
@@ -30,15 +30,31 @@ Hash Tables são listas com tamanho pré-definido em que cada elemento possui um
 Para o programador não existe diferença entre utilizar o dicionário e o unordered_map, o que muda são os processos adicionais que o computador faz por trás da criação do unordered_map.
 
 ## Como Funciona?
-Como dito anteriormente, as hash tables são criadas com tamanhos pré-definidos pelo usuário, isso significa que é necessário atribuir um tamanho inicial (assim como na declaração de uma lista sem dados), porém é possível modificá-lo depois.
-Após a chave passar pelo função hash, o programa vai definir a posição desses dados. Esse processo é feito da seguinte maneira:
+
+O processo é feito da seguinte maneira:
 1. Aplica a função hash na chave inserida pelo usuário
 2. Pega o resto da divisão entre o valor hash e o tamanho atual
 3. Utiliza o resultado para definir a posição
 4. Armazena a chave sem o hash e o valor nesta posição 
 
 ## Utilização
-Verifique, ao final desta seção, o arquivo `Hash_Table.cpp` para ter um exemplo da aplicação do HASH TABLE.
+Verifique, ao final desta seção, o arquivo `Hash_Table.cpp` para ter um exemplo de aplicação do HASH TABLE.
+
+Para declarar um **unordered_map** você precisará indicar pelo menos 2 parâmetros, o tipo da chave e o do valor, e dar um nome à sua variável. No exemplo a seguir, usarei um integer e string respectivamente.
+```cpp
+std::unordered_map<int, std::string> nome_variavel;
+```
+> Vale ressaltar que existem limitações para o tipo da chave, por exemplo, um objeto não será aceito. Confira o vídeo do [The Cherno](https://youtu.be/KiB0vRi2wlc?t=563) (este link está com a minutagem onde ele explica sobre isso) para mais detalhes.
+
+<br>
+Adicionar dados ao unordered_map é simples, não é necessário nenhuma função para inserção assim como nos vetores. Aqui está um exemplo de código:
+
+```cpp
+int chave = 1;
+std::string valor = "Capivara";
+
+nome_variavel[chave] = valor;
+```
 
 
 
@@ -46,4 +62,5 @@ Verifique, ao final desta seção, o arquivo `Hash_Table.cpp` para ter um exempl
 - Hash
     - [Lisk - What is Hashing? Hash Functions Explained Simply](https://www.youtube.com/watch?v=2BldESGZKB8)
 - Hash Tables
-  - [Bro Code - Learn Hash Tables in 13 minutes #️⃣](https://www.youtube.com/watch?v=FsfRsGFHuv4&t=9s)
+  - [Bro Code - Learn Hash Tables in 13 minutes #️⃣](https://www.youtube.com/watch?v=FsfRsGFHuv4)
+  - [The Cherno - Maps in C++ (std::map and std::unordered_map)](https://www.youtube.com/watch?v=KiB0vRi2wlc)
