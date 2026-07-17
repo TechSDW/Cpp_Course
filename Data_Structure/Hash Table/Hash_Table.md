@@ -22,11 +22,10 @@ O hash é um tipo de criptografia onde não é possível descriptografar o resul
 Dado um input qualquer ele irá passar por uma função hash que sempre retornará o mesmo valor.
 Esta criptografia apenas aplica a função ao valor inserido e o compara com o output esperado, dessa forma, não é necessário saber o conteúdo original da mensagem.
 
----
 
 ## Definição
 
-Hash Tables são listas com tamanho pré-definido em que cada elemento possui uma chave e o seu valor associado, ou seja, um dicionário. Sendo que sua posição é definida pelo resultado hash da key inserida.
+Hash Tables são listas com tamanho pré-definido em que cada elemento possui uma chave única e um valor associado, ou seja, um dicionário. Sendo que sua posição é definida pelo resultado hash da key inserida.
 Para o programador não existe diferença entre utilizar o dicionário e o unordered_map, o que muda são os processos adicionais que o computador faz por trás da criação do unordered_map.
 
 ## Como Funciona?
@@ -47,7 +46,9 @@ std::unordered_map<int, std::string> nome_variavel;
 > Vale ressaltar que existem limitações para o tipo da chave, por exemplo, um objeto não será aceito. Confira o vídeo do [The Cherno](https://youtu.be/KiB0vRi2wlc?t=563) (este link está com a minutagem onde ele explica sobre isso) para mais detalhes.
 
 <br>
-Adicionar dados ao unordered_map é simples, não é necessário nenhuma função para inserção assim como nos vetores. Aqui está um exemplo de código:
+É possível utilizar duas maneiras para inserir dados em um unordered_map. Aqui está um exemplo de ambos:
+
+<br>
 
 ```cpp
 int chave = 1;
@@ -55,8 +56,33 @@ std::string valor = "Capivara";
 
 nome_variavel[chave] = valor;
 ```
+```cpp
+int chave = 1;
+std::string valor = "Capivara";
 
+nome_variavel.insert({chave, valor});
+```
 
+<br>
+
+Existem algumas funções para procurar por um elemento dentro do unordered_map, não existe necessidade de utilizar todas elas, apenas defina um padrão de escolha para si mesmo.
+
+```cpp
+nome_variavel.find(chave) // Utilize como "if (nome_variavel.find(chave) != nome_variavel.end())"
+nome_variavel.count(chave)
+nome_variavel.contains(chave) // Forma mais moderna
+```
+> Geralmente utiliza-se o count para contar a quantidade que um item aparece, contudo não podem existir chaves idênticas no unordered_map.
+
+<br>
+Por fim, irei listar algumas outras funções importantes que podem ser utilizadas
+
+| Função | Utilidade |
+| ------ | --------- |
+| erase() | Remove um elemento |
+| size() | Quantidade de elementos |
+| empty() | Verifica se está vazio |
+| clear() | Limpa todos os elementos |
 
 ## Fontes
 - Hash
