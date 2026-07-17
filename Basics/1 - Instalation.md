@@ -7,14 +7,14 @@ Além disso, vale ressaltar que este é um tutorial escrito do vídeo do canal *
 No seu navegador, pesquise por `vs code` e clique no primeiro link disponível.
 Ou acesse diretamente esta tela através desse link: `https://code.visualstudio.com`
 
-![Pesquisa por vs code no Google](../img\Basics\Instalation\step_1.png)
+![Pesquisa por vs code no Google](../img/Basics/Instalation/step_1.png)
 
 ## 2. Instale as extensões
 As extensões funcionam para auxiliar o desenvolvedor a programar, adicionando funcionalidades como AutoComplete, Highlights, Debug, etc.
 Existem 2 extenções opcionais que irão te auxiliar durante sua programação em C++, são elas:
 
 - C/C++
-![Pesquisa por "c/c++" no VS Code](../img\Basics\Instalation\step_2-1.png)
+![Pesquisa por "c/c++" no VS Code](../img/Basics/Instalation/step_2-1.png)
 <br>
 
 - Code runner
